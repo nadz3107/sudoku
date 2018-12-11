@@ -25,6 +25,6 @@ typedef enum
 
 } ADTErr;
 
- void HandleErr(ADTErr errNum);
+void HandleErr(ADTErr errNum);
 
 #endif /*ADTERROR_H_*/
