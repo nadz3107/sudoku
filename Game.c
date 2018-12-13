@@ -18,7 +18,7 @@ void game_randomlyPickFixCells(){
 }
 
 /**
- * create empty board
+ * nadine -create empty board
  * use randomized backtracking to get random solve board
  * repeat fix cell H time
  */
