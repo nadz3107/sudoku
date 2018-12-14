@@ -5,7 +5,7 @@ typedef struct cell_t{
 	int value;
 	bool isFix;
 } Cell;
-
+/* nadin*/
 void 	game_create(int row, int col,int fixCell, int seed);
 ADTErr 	game_playTurn(Command command);
 void 	game_randomlyPickFixCells();
