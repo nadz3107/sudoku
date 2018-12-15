@@ -33,6 +33,44 @@ char* mainAux_readCommand(){
 	return NULL;
 }
 
-void printBoard(int**matrix){
-
+/* nadin*/
+void rowSeparator() {
+	int i;
+	for (i = 0; i < 34; i++) {
+		printf("-");
+	}
+	printf("\n");
 }
+
+/*nadin: print the current position of the board */
+
+void printBoard( int **matrixPlay, int **matrixfixed){
+	int i,j;
+	for(i=0; i<9; i++)
+	{
+		/*every 3 rows we will print a line*/
+		if(i % 3 == 0)
+		{
+			rowSeparator();
+		}
+		for(j=0;j<9;j++)
+		{
+			/*every 3 col we will print a line*/
+			if(j % 3 == 0)
+			{
+				printf("| ");
+			}
+			if(matrixfixed[i][j]!=0)
+			{
+				printf(".%d ",matrixPlay[i][j]);
+			}else if(matrixfixed[i][j]==0 && matrixPlay[i][j]!=0)
+			{
+				printf(" %d ",matrixPlay[i][j]);
+			}else
+			{
+				printf("   ");
+			}
+		}printf("|\n");
+	}rowSeparator();
+}
+
